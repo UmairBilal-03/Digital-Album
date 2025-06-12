@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import wmImage from '../assets/strt.jpg';
+import openImg from "../assets/open.png"; 
 
 
 interface TableSceneProps {
@@ -15,7 +16,7 @@ const TableScene: React.FC<TableSceneProps> = ({ onJournalClick, journalOpened }
       <div 
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: `url('/src/assets/open.png')`,
+         backgroundImage: `url(${openImg})`,
         }}
       >
         {/* Ambient lighting overlay */}
