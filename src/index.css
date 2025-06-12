@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ru
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lora', serif;
+  background: #2c1810;
+  overflow-x: hidden;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(139, 69, 19, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 69, 19, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 69, 19, 0.7);
+}
+
+/* Paper texture effect */
+.paper-texture {
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(120, 119, 108, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(120, 119, 108, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(120, 119, 108, 0.3) 0%, transparent 50%);
+}
+
+/* Vintage photo effect */
+.vintage-photo {
+  filter: sepia(20%) contrast(1.2) brightness(0.9);
+  box-shadow: 
+    0 0 0 8px #fff,
+    0 0 0 9px #ddd,
+    0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Journal shadow */
+.journal-shadow {
+  box-shadow: 
+    0 20px 40px rgba(0,0,0,0.4),
+    0 10px 20px rgba(0,0,0,0.2),
+    inset 0 0 0 1px rgba(139, 69, 19, 0.2);
+}
+
+/* Page flip animation */
+.page-flip-enter {
+  transform: rotateY(0deg);
+}
+
+.page-flip-enter-active {
+  transform: rotateY(-180deg);
+  transition: transform 0.8s ease-in-out;
+}
+
+/* Ambient lighting effect */
+.ambient-light {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(218, 165, 32, 0.1) 0%,
+    rgba(139, 69, 19, 0.05) 50%,
+    transparent 100%
+  );
+}
+
+/* Handwritten text effect */
+.handwritten {
+  font-family: 'Great Vibes', cursive;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Ink blot effect */
+.ink-blot {
+  background: radial-gradient(circle, rgba(44, 24, 16, 0.8) 0%, transparent 70%);
+}
